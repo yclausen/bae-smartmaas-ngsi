@@ -1,8 +1,8 @@
 {
-  "name": "SmartMaaS NGSI-Query",
+  "name": "SmartMaas NGSI Query",
   "author": "yclausen",
   "version": "0.1",
-  "module": "context_broker_nsgi.SmartMaasNGSI",
+  "module": "smartmaas_ngsi_query.SmartMaasNGSIQuery",
   "media_types": ["application/json", "application/ld+json"],
   "formats": ["URL"],
   "overrides": [],

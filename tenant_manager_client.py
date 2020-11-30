@@ -83,33 +83,16 @@ class TenantManagerClient(object):
 
         return username
 
-    def check_seller_assigned_to_tenant(self, user, tenant_id):
-        assigned_to_tenant = False
-        tenant = self.get_tenant(tenant_id)
-        for tenant_user in tenant['users']:
-            if tenant_user['name'] == user.name:
-                assigned_to_tenant = True
-                break
-
-        return assigned_to_tenant
-
-    def check_organisation_assigned_to_tenant(self, user, tenant_id):
-        assigned_to_tenant = False
-        tenant = self.get_tenant(tenant_id)
-        if tenant['tenant_organization'] == user.name:
-            assigned_to_tenant = True
-
-        return assigned_to_tenant
-
-    def grant_permission(self, tenant_id, tenant_info, customer, organisation):
-        # organisation.name is a ID
-        # customer.name is a ID
+    def grant_permission(self, tenant_id, customer, organisation):
+        # organisation.name is the keyrock id of the user(buyer)
+        # customer.username is the keyrock id of the user(buyer)
+        tenant_info = self.get_tenant(tenant_id)
         found = len([user for user in tenant_info['users'] if user['id'] == organisation.name]) > 0
 
         if not found:
             patch = [
                 {'op': 'add', 'path': '/users/-', 'value': {
-                    'id': customer.name, 'name': self.get_username(customer.username), 'roles': ["data-consumer"]}},
+                    'id': customer.username, 'name': self.get_username(customer.username), 'roles': ["data-consumer"]}},
             ]
 
             url = TENANT_MANAGER_URL + '/tenant-manager/tenant/{}'.format(tenant_id)
@@ -121,4 +104,23 @@ class TenantManagerClient(object):
             if resp.status_code != 200:
                 raise PluginError('An error happened updating tenant')
 
+    def revoke_permission(self, tenant_id, customer, organisation):
+        tenant_info = self.get_tenant(tenant_id)
+        user_id = customer.username
+
+        found = len([user for user in tenant_info['users'] if user['id'] == organisation.name]) > 0
+
+        if found:
+            patch = [
+                {'op': 'remove', 'path': '/users/{}'.format(user_id)}
+            ]
+
+            url = TENANT_MANAGER_URL + '/tenant-manager/tenant/{}'.format(tenant_id)
+
+            resp = requests.patch(url, json=patch, headers={
+                'Authorization': 'Bearer ' + self._auth_token
+            })
+
+            if resp.status_code != 200:
+                raise PluginError('An error happened removing user from tenant')
 

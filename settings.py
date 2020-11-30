@@ -22,22 +22,20 @@ UNITS = [{
     'description': 'The final price is calculated based on the number of calls made to the API'
 }]
 
-# Keyrock user email
+# Keyrock
+# URL
+IDM_URL = 'http://localhost:3000'
+# User email
 IDM_USER = 'admin@test.com'
-
-# Keyrock user password
+# User password
 IDM_PASSWORD = '1234'
-
-# Keyrock url
-IDM_URL = 'https://localhost:3000'
-
-# Keyrock client ID
+# Client ID
 BAE_LP_OAUTH2_CLIENT_ID = ''
-
-# Keyrock client Secret
+# Client Secret
 BAE_LP_OAUTH2_CLIENT_SECRET = ''
 
-# Tenant-Manager URL
+# Tenant-Manager
+# URL
 TENANT_MANAGER_URL = 'http://tenantservice:5000'
 
 IDM_USER = environ.get('BAE_ASSET_IDM_USER', IDM_USER)

@@ -46,25 +46,6 @@ class KeyrockClient(object):
         response.raise_for_status()
         self._auth_token = response.headers['x-subject-token']
 
-    def check_ownership(self, app_id, provider):
-        path = '/v1/applications/{}/users/{}/roles'.format(app_id, provider)
-        role_field = 'role_user_assignments'
-
-        assingments_url = IDM_URL + path
-
-        resp = requests.get(assingments_url, headers={
-            'X-Auth-Token': self._auth_token
-        }, verify=django_settings.VERIFY_REQUESTS)
-
-        resp.raise_for_status()
-        assingments = resp.json()
-
-        for assingment in assingments[role_field]:
-            if assingment['role_id'] == 'provider':
-                break
-        else:
-            raise PermissionDenied('You are not the owner of the specified IDM application')
-
     def check_role(self, app_id, role_name):
         # Get available roles
         path = '/v1/applications/{}/roles'.format(app_id)
@@ -97,7 +78,7 @@ class KeyrockClient(object):
             'Content-Type': 'application/json'
         }, verify=django_settings.VERIFY_REQUESTS)
 
-        return resp.status_code
+        resp.raise_for_status()
 
     def revoke_permission(self, app_id, user, role):
         role_id = self.check_role(app_id, role)
