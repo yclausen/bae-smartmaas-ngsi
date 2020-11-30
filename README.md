@@ -7,18 +7,18 @@ This plugin for the <b>Business API Ecosystem</b> supports both the <b>Tenant-Ma
 the <b>Keyrock</b> to allow API access to NGSIv2 and NGSI-LD in APInf.  It is specifically designed for the architecture
 of the FIWARE SmartMaaS platform.
 
-The plugin checks whether a seller in the marketplace in Tenant Manager is authorized to sell the corresponding product 
+The plugin checks whether a seller in the marketplace in Tenant-Manager is authorized to sell the corresponding product 
 for his logged in organization (tenant).
  
 The product specific role that a seller specifies during the product creation is the role that is assigned to the buyer 
-during the buying process to allow access to the data via keyrock.
-In addition, for access to the NGSIv2 and NGSI-LD APIs in APInf, the buyer is assigned a data consumer role in the 
-tenant manager of the respective organization (tenant).
+during the buying process to allow access to the data via Keyrock.
+In addition, for access to the NGSIv2 and NGSI-LD APIs in APInf, the buyer is assigned a <b>data-consumer</b> role in the 
+Tenant-Manager of the respective organization (tenant).
 
 Who can sell the products?
-1) The owner of an organization (tenant)
-2) A member of an organization (tenant) who has the role <b>data-provider</b> in the tenant manager. The sale can be executed 
-by the seller switching to the organization (tenant) in the marketplace.
+1) The <b>owner</b> of an organization (tenant). Therefore the owner of the organization must be assigned the role 
+<b>data-provider</b> in the Keyrock application "API Access" and in the Tenant-Manager. The organization (tenant) must 
+also be assigned the roles <b>customer</b> and <b>seller</b> for its owner in the marketplace application.
 
 
 ## Installation
