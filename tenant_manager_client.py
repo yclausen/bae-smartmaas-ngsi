@@ -108,11 +108,18 @@ class TenantManagerClient(object):
         tenant_info = self.get_tenant(tenant_id)
         user_id = customer.username
 
-        found = len([user for user in tenant_info['users'] if user['id'] == organisation.name]) > 0
+        id_list = []
+        # Create array with all Ids from tenant
+        for item in tenant_info['users']:
+            id_list.append(item['id'])
 
-        if found:
+        # Check if Id from user is available
+        if user_id in id_list:
+            # check in which index the user is stored in the Tenant-Manager and remove it using its index
+            index = id_list.index(user_id)
+
             patch = [
-                {'op': 'remove', 'path': '/users/{}'.format(user_id)}
+                {'op': 'remove', 'path': '/users/{}'.format(index)}
             ]
 
             url = TENANT_MANAGER_URL + '/tenant-manager/tenant/{}'.format(tenant_id)
