@@ -92,7 +92,7 @@ class TenantManagerClient(object):
         if not found:
             patch = [
                 {'op': 'add', 'path': '/users/-', 'value': {
-                    'id': customer.username, 'name': self.get_username(customer.username), 'roles': ["data-consumer"]}},
+                    'id': customer.username, 'name': self.get_username(customer.username), 'roles': ["data-consumer"]}}
             ]
 
             url = TENANT_MANAGER_URL + '/tenant-manager/tenant/{}'.format(tenant_id)
