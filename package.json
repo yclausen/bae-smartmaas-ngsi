@@ -25,18 +25,6 @@
       "label": "FIWARE-Service (Tenant)",
       "placeholder": "fiware-service",
       "mandatory": true
-    },
-    "entities": {
-      "type": "text",
-      "label": "Entities",
-      "placeholder": "Vehicle,Parking",
-      "mandatory": true
-    },
-    "role": {
-      "type": "text",
-      "label": "Role for the Acquisition",
-      "placeholder": "customer",
-      "mandatory": true
     }
   }
 }

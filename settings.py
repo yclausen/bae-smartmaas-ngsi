@@ -22,32 +22,25 @@ UNITS = [{
     'description': 'The final price is calculated based on the number of calls made to the API'
 }]
 
-# Keyrock
-# URL
+# local settings
 IDM_URL = 'http://localhost:3000'
-# User email
 IDM_USER = 'admin@test.com'
-# User password
 IDM_PASSWORD = '1234'
-# Client ID API Access application
 BAE_LP_OAUTH2_CLIENT_ID = ''
-# Client Secret API Access application
 BAE_LP_OAUTH2_CLIENT_SECRET = ''
+TENANT_MANAGER_URL = 'http://tenantmanager:5000'
 
-# Client ID Marketplace application
-BAE_MARKET_APP_CLIENT_ID = ''
+###############################
+# Read variables from the yml #
+###############################
 
-# Tenant-Manager
-# URL
-TENANT_MANAGER_URL = 'http://tenantservice:5000'
-
+# Keyrock
 IDM_USER = environ.get('BAE_ASSET_IDM_USER', IDM_USER)
 IDM_PASSWORD = environ.get('BAE_ASSET_IDM_PASSWORD', IDM_PASSWORD)
 IDM_URL = environ.get('BAE_ASSET_IDM_URL', IDM_URL)
-
+# Client ID and Client Secret of API Catalogue application
 CLIENT_ID = environ.get('BAE_LP_OAUTH2_CLIENT_ID', BAE_LP_OAUTH2_CLIENT_ID)
 CLIENT_SECRET = environ.get('BAE_LP_OAUTH2_CLIENT_SECRET', BAE_LP_OAUTH2_CLIENT_SECRET)
 
-MARKET_CLIENT_ID = environ.get('BAE_MARKET_APP_CLIENT_ID', BAE_MARKET_APP_CLIENT_ID)
-
+# Tenant-Manager
 TENANT_MANAGER_URL = environ.get('TENANT_MANAGER_URL', TENANT_MANAGER_URL)
