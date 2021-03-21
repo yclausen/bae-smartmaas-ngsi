@@ -112,13 +112,13 @@ The following steps are then to be performed:
         <img src="docs/img/marketplace/create_product_assets.png" alt="Create Product Assets" width="650" height="480">
     </p>
     
-    ##### The plugin includes the following fields that must be filled in:
+    #### The plugin includes the following fields that must be filled in:
     
-    * Asset URL: URL to the Context Broker for NGSIv2 or NGSI-LD, e.g. a product with NGSIv2 data for the area Kiel
-    `https://context.michael.maas.tools/v2/entities?type=AirQualityObserved&georel=coveredBy&georel=near;maxDistance:5000&geometry=point&coords=50.77609794859866,6.083765029907227&options=count,keyValuess`
-    * Media-Type (Header): application/json or application/ld+json selectable                                                                                                                                                                                                                                                            
-    * NGSI-Type: NGSIv2 or NGSI-LD selectable
-    * Fiware-Service (Tenant): Tenant which contains the data
+    * `Asset URL`: URL to the Context Broker for NGSIv2 or NGSI-LD, e.g. a product with NGSIv2 data for the area Kiel
+    `https://<your-domain>/v2/entities?type=AirQualityObserved&georel=coveredBy&georel=near;maxDistance:5000&geometry=point&coords=50.77609794859866,6.083765029907227&options=count,keyValuess`
+    * `Media-Type (Header)`: application/json or application/ld+json selectable                                                                                                                                                                                                                                                            
+    * `NGSI-Type`: NGSIv2 or NGSI-LD selectable
+    * `Fiware-Service (Tenant)`: Tenant which contains the data
     
     <p align="center">
         <img src="docs/img/marketplace/create_product_license.png" alt="Create Product License" width="650" height="480">
