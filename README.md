@@ -160,7 +160,7 @@ Since the data can only be retrieved by applying a bearer token, the customer ne
 platform after completing the purchase and retrieve the required bearer token via the Tenant-Manager Authorization.
 
 <p align="center">
-    <img src="docs/img/tenant-manager/retrieve_bearer_token.png" alt="Overview of offers" width="450" height="340">
+    <img src="docs/img/tenant-manager/retrieve_bearer_token.png" alt="Overview of offers" width="650" height="340">
 </p>
     
     
