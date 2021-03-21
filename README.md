@@ -42,7 +42,7 @@ A Product can generally be created by users in the Business API Ecosystem who ha
 application of the Business API Ecosystem.
 
 <p align="center">
-    <img src="docs/img/keyrock/market_application_seller.png" alt="User of the Business API Ecosystem with seller role" width="450" height="340">
+    <img src="docs/img/keyrock/market_application_seller.png" alt="User of the Business API Ecosystem with seller role" width="650" height="340">
 </p>
 
 If the user of the Business API Ecosystem has the `seller` role, he will be able to monetize his products by creating, 
@@ -77,7 +77,7 @@ In our example, the user admin (default admin in Keyrock) is the tenant-admin on
 He has created the tenant smartmaas001 in the tenant manager.
 
 <p align="center">
-    <img src="docs/img/tenant-manager/show_tenant.png" alt="Tenant in Tenant-Manager" width="450" height="340">
+    <img src="docs/img/tenant-manager/show_tenant.png" alt="Tenant in Tenant-Manager" width="650" height="340">
 </p>
 
 The tenant contains e.g. NGSIv2 data. User admin adds user yclausen as data-provider to smartmaas001.
@@ -90,7 +90,7 @@ The following steps are then to be performed:
 1)  User yclausen changes to organization smartmaas001.
 
     <p align="center">
-        <img src="docs/img/marketplace/switching_to_organisation.png" alt="Switching user" width="450" height="340">
+        <img src="docs/img/marketplace/switching_to_organisation.png" alt="Switching user" width="650" height="300">
     </p>
     
     Only the user admin, can stay in the marketplace on his user to directly create products for smartmaas001.
@@ -99,25 +99,25 @@ The following steps are then to be performed:
 2)  Create catalog under which the product will be filed.
 
     <p align="center">
-        <img src="docs/img/marketplace/create_catalog.png" alt="Create Catalog" width="450" height="340">
+        <img src="docs/img/marketplace/create_catalog.png" alt="Create Catalog" width="650" height="300">
     </p>
 
 3) Create the product for the NGSIv2 data
 
     <p align="center">
-        <img src="docs/img/marketplace/create_catalog.png" alt="Create Product Gernal" width="450" height="340">
+        <img src="docs/img/marketplace/create_catalog.png" alt="Create Product Gernal" width="650" height="300">
     </p>
     
     <p align="center">
-        <img src="docs/img/marketplace/create_product_assets.png" alt="Create Product Assets" width="450" height="340">
+        <img src="docs/img/marketplace/create_product_assets.png" alt="Create Product Assets" width="650" height="480">
     </p>
     
     <p align="center">
-        <img src="docs/img/marketplace/create_product_license.png" alt="Create Product License" width="450" height="340">
+        <img src="docs/img/marketplace/create_product_license.png" alt="Create Product License" width="650" height="480">
     </p>
     
     <p align="center">
-        <img src="docs/img/marketplace/create_product_overview.png" alt="Product Overview" width="450" height="340">
+        <img src="docs/img/marketplace/create_product_overview.png" alt="Product Overview" width="650" height="480">
     </p>
     
     When the product is stored, an product specific role and permission for read access to the data will be created 
