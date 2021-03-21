@@ -105,7 +105,7 @@ The following steps are then to be performed:
 3) Create the product for the NGSIv2 data
 
     <p align="center">
-        <img src="docs/img/marketplace/create_catalog.png" alt="Create Product Gernal" width="650" height="300">
+        <img src="docs/img/marketplace/create_product_generel.png" alt="Create Product Gernal" width="650" height="300">
     </p>
     
     <p align="center">
