@@ -105,12 +105,20 @@ The following steps are then to be performed:
 3) Create the product for the NGSIv2 data
 
     <p align="center">
-        <img src="docs/img/marketplace/create_product_generel.png" alt="Create Product Gernal" width="650" height="300">
+        <img src="docs/img/marketplace/create_product_general.png" alt="Create Product Gernal" width="650" height="300">
     </p>
     
     <p align="center">
         <img src="docs/img/marketplace/create_product_assets.png" alt="Create Product Assets" width="650" height="480">
     </p>
+    
+    ##### The plugin includes the following fields that must be filled in:
+    
+    * Asset URL: URL to the Context Broker for NGSIv2 or NGSI-LD, e.g. a product with NGSIv2 data for the area Kiel
+    `https://context.michael.maas.tools/v2/entities?type=AirQualityObserved&georel=coveredBy&georel=near;maxDistance:5000&geometry=point&coords=50.77609794859866,6.083765029907227&options=count,keyValuess`
+    * Media-Type (Header): application/json or application/ld+json selectable                                                                                                                                                                                                                                                            
+    * NGSI-Type: NGSIv2 or NGSI-LD selectable
+    * Fiware-Service (Tenant): Tenant which contains the data
     
     <p align="center">
         <img src="docs/img/marketplace/create_product_license.png" alt="Create Product License" width="650" height="480">
@@ -140,7 +148,7 @@ The following steps are then to be performed:
     </p>
     
     <p align="center">
-        <img src="docs/img/marketplace/offerings_overview.png" alt="Overview of offers" width="650" height="480">
+        <img src="docs/img/marketplace/offers_overview.png" alt="Overview of offers" width="650" height="480">
     </p>
     
 
@@ -148,8 +156,12 @@ When a customer purchases the product, the customer is automatically added to th
 Tenant-Manager and will be assigned the product-specific role in Keyrock. This gives the customer the appropriate read 
 access.
     
-Since the data can only be retrieved by applying a bearer token, the customer only needs to access the APInf 
-platform after completing the purchase and retrieve the required bearer token via the Tenant-Manager.
+Since the data can only be retrieved by applying a bearer token, the customer needs to access the APInf 
+platform after completing the purchase and retrieve the required bearer token via the Tenant-Manager Authorization.
+
+<p align="center">
+    <img src="docs/img/tenant-manager/retrieve_bearer_token.png" alt="Overview of offers" width="450" height="340">
+</p>
     
     
 ## Installation
