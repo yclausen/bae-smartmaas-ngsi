@@ -135,6 +135,14 @@ The following steps are then to be performed:
 4)  After the product for NGSIv2 data is created with the plugin, you can submit an appropriate offer for selling 
     of the product. The creation of an offer is described in detail in the documentation of Business API Ecosystem.
     
+    <p align="center">
+        <img src="docs/img/marketplace/offering_ngsiv2_product.png" alt="Created Offering" width="650" height="480">
+    </p>
+    
+    <p align="center">
+        <img src="docs/img/marketplace/offerings_overview.png" alt="Overview of offers" width="650" height="480">
+    </p>
+    
 
 When a customer purchases the product, the customer is automatically added to the tenant as a data-consumer in 
 Tenant-Manager and will be assigned the product-specific role in Keyrock. This gives the customer the appropriate read 
@@ -143,8 +151,7 @@ access.
 Since the data can only be retrieved by applying a bearer token, the customer only needs to access the APInf 
 platform after completing the purchase and retrieve the required bearer token via the Tenant-Manager.
     
-
-
+    
 ## Installation
 
 * Create zip file
