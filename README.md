@@ -1,4 +1,30 @@
-# BAE SmartMaaS NGSI Plugin
+<h2 align="center">
+  <a href="https://smart-maas.eu/en/"><img src="https://github.com/SmartMaaS-Services/Transaction-Context-Manager/blob/main/docs/images/Header.jpeg" alt="Smart MaaS" width="500"></a>
+  <br>
+      SMART MOBILITY SERVICE PLATFORM
+  <br>
+  <a href="https://smart-maas.eu/en/"><img src="https://github.com/SmartMaaS-Services/Transaction-Context-Manager/blob/main/docs/images/Logos-Smart-MaaS.png" alt="Smart MaaS" width="250"></a>
+  <br>
+</h2>
+
+<p align="center">
+  <a href="mailto:info@smart-maas.eu">Contact</a> •
+  <a href="https://github.com/SmartMaaS-Services/Transaction-Context-Manager/issues">Issues</a> •
+  <a href="https://smart-maas.eu/en/">Project Page</a>
+</p>
+
+
+***
+
+<h1 align="center">
+  <a>
+    BAE SmartMaaS NGSI Plugin
+  </a>
+</h1>
+
+***
+
+
 [![FIWARE Banner](https://fiware.github.io/tutorials.Accessing-Context/img/fiware.png)](https://www.fiware.org/developers)
 [![NGSI v2](https://img.shields.io/badge/NGSI-v2-5dc0cf.svg)](https://fiware-ges.github.io/orion/api/v2/stable/)
 [![NGSI-LD badge](https://img.shields.io/badge/NGSI-LD-5dc0cf.svg)](https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.02.01_60/gs_cim009v010201p.pdf)
